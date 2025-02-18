@@ -1,0 +1,10 @@
+C:/Users/john/src/ngake/GodotTerm/build/CMakeFiles/GodotTerm.dir
+C:/Users/john/src/ngake/GodotTerm/build/CMakeFiles/INSTALL.dir
+C:/Users/john/src/ngake/GodotTerm/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/john/src/ngake/GodotTerm/build/CMakeFiles/ZERO_CHECK.dir
+C:/Users/john/src/ngake/GodotTerm/build/src/CMakeFiles/INSTALL.dir
+C:/Users/john/src/ngake/GodotTerm/build/templates/CMakeFiles/templates.dir
+C:/Users/john/src/ngake/GodotTerm/build/templates/CMakeFiles/INSTALL.dir
+C:/Users/john/src/ngake/GodotTerm/build/extern/godot-cpp/CMakeFiles/godot-cpp.dir
+C:/Users/john/src/ngake/GodotTerm/build/extern/godot-cpp/CMakeFiles/INSTALL.dir
+C:/Users/john/src/ngake/GodotTerm/build/extern/godot-cpp/CMakeFiles/ALL_BUILD.dir

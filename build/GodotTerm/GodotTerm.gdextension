@@ -1,0 +1,18 @@
+; GodotTerm.gdextension - release version
+; File Created: 12 February 2025
+;
+
+[configuration]
+entry_symbol = "GDExtensionInit"
+compatibility_minimum = 4.4
+reloadable = true
+
+[icons]
+GodotTerm = "icons/GodotTerm.svg"
+
+[libraries]
+linux.release.x86_64 = "lib/Linux-x86_64/libGodotTerm.so"
+macos.release = "lib/Darwin-universal/libGodotTerm.dylib"
+windows.release.x86_64 = "lib/Windows-AMD64/GodotTerm.dll"
+
+; End of GodotTerm.gdextension
