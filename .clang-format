@@ -51,13 +51,13 @@ AlignConsecutiveTableGenCondOperatorColons:
   AlignCompound:   false
   # AlignFunctionPointers: false
   PadOperators:    false
-AlignConsecutiveTableGenDefinitionColons:
-  Enabled:         false
-  AcrossEmptyLines: false
-  AcrossComments:  false
-  AlignCompound:   false
-  # AlignFunctionPointers: false
-  PadOperators:    false
+# AlignConsecutiveTableGenDefinitionColons:
+#   Enabled:         false
+#   AcrossEmptyLines: false
+#   AcrossComments:  false
+#   AlignCompound:   false
+#   AlignFunctionPointers: false
+#   PadOperators:    false
 AlignEscapedNewlines: Left
 AlignOperands:   Align
 # AlignTrailingComments:
