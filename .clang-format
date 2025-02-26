@@ -8,28 +8,28 @@ AlignConsecutiveAssignments:
   AcrossEmptyLines: false
   AcrossComments:  false
   AlignCompound:   false
-  # AlignFunctionPointers: false
+  AlignFunctionPointers: false
   PadOperators:    true
 AlignConsecutiveBitFields:
   Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
   AlignCompound:   false
-  # AlignFunctionPointers: false
+  AlignFunctionPointers: false
   PadOperators:    false
 AlignConsecutiveDeclarations:
   Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
   AlignCompound:   false
-  # AlignFunctionPointers: false
+  AlignFunctionPointers: false
   PadOperators:    false
 AlignConsecutiveMacros:
   Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
   AlignCompound:   false
-  # AlignFunctionPointers: false
+  AlignFunctionPointers: false
   PadOperators:    false
 AlignConsecutiveShortCaseStatements:
   Enabled:         false
@@ -42,34 +42,34 @@ AlignConsecutiveTableGenBreakingDAGArgColons:
   AcrossEmptyLines: false
   AcrossComments:  false
   AlignCompound:   false
-  # AlignFunctionPointers: false
+  AlignFunctionPointers: false
   PadOperators:    false
 AlignConsecutiveTableGenCondOperatorColons:
   Enabled:         false
   AcrossEmptyLines: false
   AcrossComments:  false
   AlignCompound:   false
-  # AlignFunctionPointers: false
+  AlignFunctionPointers: false
   PadOperators:    false
-# AlignConsecutiveTableGenDefinitionColons:
-#   Enabled:         false
-#   AcrossEmptyLines: false
-#   AcrossComments:  false
-#   AlignCompound:   false
-#   AlignFunctionPointers: false
-#   PadOperators:    false
+AlignConsecutiveTableGenDefinitionColons:
+  Enabled:         false
+  AcrossEmptyLines: false
+  AcrossComments:  false
+  AlignCompound:   false
+  AlignFunctionPointers: false
+  PadOperators:    false
 AlignEscapedNewlines: Left
 AlignOperands:   Align
-# AlignTrailingComments:
-  # Kind:            Always
-  # OverEmptyLines:  0
+AlignTrailingComments:
+  Kind:            Always
+  OverEmptyLines:  0
 AllowAllArgumentsOnNextLine: true
 AllowAllParametersOfDeclarationOnNextLine: true
 AllowBreakBeforeNoexceptSpecifier: Never
 AllowShortBlocksOnASingleLine: Never
 AllowShortCaseExpressionOnASingleLine: true
 AllowShortCaseLabelsOnASingleLine: false
-# AllowShortCompoundRequirementOnASingleLine: true
+AllowShortCompoundRequirementOnASingleLine: true
 AllowShortEnumsOnASingleLine: true
 AllowShortFunctionsOnASingleLine: All
 AllowShortIfStatementsOnASingleLine: WithoutElse
@@ -101,7 +101,7 @@ BraceWrapping:
   SplitEmptyFunction: true
   SplitEmptyRecord: true
   SplitEmptyNamespace: true
-# BreakAdjacentStringLiterals: true
+BreakAdjacentStringLiterals: true
 BreakAfterAttributes: Leave
 BreakAfterJavaFieldAnnotations: false
 BreakAfterReturnType: None
@@ -115,7 +115,7 @@ BreakConstructorInitializers: BeforeColon
 BreakFunctionDefinitionParameters: false
 BreakInheritanceList: BeforeColon
 BreakStringLiterals: true
-# BreakTemplateDeclarations: Yes
+BreakTemplateDeclarations: Yes
 ColumnLimit:     80
 CommentPragmas:  '^ IWYU pragma:'
 CompactNamespaces: false
@@ -166,13 +166,13 @@ IndentWrappedFunctionNames: false
 InsertBraces:    false
 InsertNewlineAtEOF: false
 InsertTrailingCommas: None
-# IntegerLiteralSeparator:
-#   Binary:          0
-#   BinaryMinDigits: 0
-#   Decimal:         0
-#   DecimalMinDigits: 0
-#   Hex:             0
-#   HexMinDigits:    0
+IntegerLiteralSeparator:
+  Binary:          0
+  BinaryMinDigits: 0
+  Decimal:         0
+  DecimalMinDigits: 0
+  Hex:             0
+  HexMinDigits:    0
 JavaScriptQuotes: Leave
 JavaScriptWrapImports: true
 KeepEmptyLines:
@@ -239,16 +239,16 @@ RawStringFormats:
 ReferenceAlignment: Pointer
 ReflowComments:  true
 RemoveBracesLLVM: false
-# RemoveParentheses: Leave
+RemoveParentheses: Leave
 RemoveSemicolon: false
 RequiresClausePosition: OwnLine
 RequiresExpressionIndentation: OuterScope
 SeparateDefinitionBlocks: Leave
 ShortNamespaceLines: 1
-# SkipMacroDefinitionBody: false
+SkipMacroDefinitionBody: false
 SortIncludes:    CaseSensitive
 SortJavaStaticImport: Before
-# SortUsingDeclarations: LexicographicNumeric
+SortUsingDeclarations: LexicographicNumeric
 SpaceAfterCStyleCast: false
 SpaceAfterLogicalNot: false
 SpaceAfterTemplateKeyword: true
@@ -267,7 +267,7 @@ SpaceBeforeParensOptions:
   AfterFunctionDeclarationName: false
   AfterIfMacros:   true
   AfterOverloadedOperator: false
-  # AfterPlacementOperator: true
+  AfterPlacementOperator: true
   AfterRequiresInClause: false
   AfterRequiresInExpression: false
   BeforeNonEmptyParentheses: false
