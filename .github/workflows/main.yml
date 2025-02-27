@@ -69,7 +69,7 @@ jobs:
         with:
           max-size: '10G'
           key: ${{ matrix.config.os }}-${{ matrix.build_type }}
-					variant: sccache
+          variant: sccache
 
       - name: Configure
         run: >
