@@ -22,7 +22,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        build_type: ['Debug', 'Release']
+        build_type: ['Release']
         config:
           - { name: '🍏 macOS Clang', os: macos-latest }
           - { name: '🐧 Linux GCC', os: ubuntu-latest }
@@ -56,20 +56,19 @@ jobs:
         if: matrix.config.os == 'windows-latest'
         uses: ilammy/msvc-dev-cmd@v1
 
-      - name: ccache (non-Windows)
-        if: matrix.config.os != 'windows-latest'
+      - name: ccache
         uses: hendrikmuhs/ccache-action@v1.2
         with:
           max-size: '10G'
           key: ${{ matrix.config.os }}-${{ matrix.build_type }}
 
-      - name: ccache (Windows)
-        if: matrix.config.os == 'windows-latest'
-        uses: hendrikmuhs/ccache-action@v1.2
-        with:
-          max-size: '10G'
-          key: ${{ matrix.config.os }}-${{ matrix.build_type }}
-          variant: sccache
+      # - name: ccache (Windows)
+      #   if: matrix.config.os == 'windows-latest'
+      #   uses: hendrikmuhs/ccache-action@v1.2
+      #   with:
+      #     max-size: '10G'
+      #     key: ${{ matrix.config.os }}-${{ matrix.build_type }}
+      #     variant: sccache
 
       - name: Configure
         run: >
@@ -88,13 +87,13 @@ jobs:
       - name: Install
         run: cmake --install GodotTerm-build
 
-      - name: Upload artifact (Debug)
-        if: matrix.build_type == 'Debug'
-        uses: actions/upload-artifact@v4
-        with:
-          name: ${{ github.event.repository.name }}-${{ matrix.config.os }}-Debug
-          path: |
-            ${{ github.workspace }}/install-${{ matrix.build_type }}/*
+      # - name: Upload artifact (Debug)
+      #   if: matrix.build_type == 'Debug'
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: ${{ github.event.repository.name }}-${{ matrix.config.os }}-Debug
+      #     path: |
+      #       ${{ github.workspace }}/install-${{ matrix.build_type }}/*
 
       - name: Upload artifact (Release)
         if: matrix.build_type == 'Release'
