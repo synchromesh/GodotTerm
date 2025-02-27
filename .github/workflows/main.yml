@@ -61,6 +61,7 @@ jobs:
         with:
           max-size: '10G'
           key: ${{ matrix.config.os }}-${{ matrix.build_type }}
+					verbose: 1
 
       # - name: ccache (Windows)
       #   if: matrix.config.os == 'windows-latest'
