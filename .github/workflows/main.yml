@@ -56,28 +56,37 @@ jobs:
         if: matrix.config.os == 'windows-latest'
         uses: ilammy/msvc-dev-cmd@v1
 
-      - name: ccache
+      - name: ccache (non-Windows)
+        if: matrix.config.os != 'windows-latest'
         uses: hendrikmuhs/ccache-action@v1.2
         with:
           max-size: '10G'
           key: ${{ matrix.config.os }}-${{ matrix.build_type }}
 
+      - name: ccache (Windows)
+        if: matrix.config.os == 'windows-latest'
+        uses: hendrikmuhs/ccache-action@v1.2
+        with:
+          max-size: '10G'
+          key: ${{ matrix.config.os }}-${{ matrix.build_type }}
+					variant: sccache
+
       - name: Configure
         run: >
-          mkdir GDExtension-build
+          mkdir GodotTerm-build
 
           cmake
-          -B GDExtension-build
+          -B GodotTerm-build
           -G "Ninja"
           -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
           --install-prefix ${{ github.workspace }}/install-${{ matrix.build_type }}
           .
 
       - name: Build
-        run: cmake --build GDExtension-build
+        run: cmake --build GodotTerm-build
 
       - name: Install
-        run: cmake --install GDExtension-build
+        run: cmake --install GodotTerm-build
 
       - name: Upload artifact (Debug)
         if: matrix.build_type == 'Debug'
